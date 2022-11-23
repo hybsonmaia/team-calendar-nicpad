@@ -1,0 +1,30 @@
+{
+  "name": "TeamCalendar",
+  "version": "1.0.0",
+  "description": "UI5 Demo App - Team Calendar",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "lint": "eslint webapp",
+    "build": "ui5 build --all --clean-dest"
+  },
+  "dependencies": {
+    "@openui5/sap.f": "^1",
+    "@openui5/sap.m": "^1",
+    "@openui5/sap.ui.core": "^1",
+    "@openui5/sap.ui.documentation": "^1",
+    "@openui5/sap.ui.layout": "^1",
+    "@openui5/themelib_sap_fiori_3": "^1",
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": "18.12.1",
+    "npm": "8.19.3"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^2.14.4",
+    "eslint": "^4.19.1"
+  },
+  "author": "nic-labs"
+}
