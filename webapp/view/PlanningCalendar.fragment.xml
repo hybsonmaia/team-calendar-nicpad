@@ -16,7 +16,7 @@
                 <Select id="PlanningCalendarTeamSelector" change=".selectChangeHandler">
                     <core:Item key="Team" text="Equipe" />
                 </Select>
-                <Button id="PlanningCalendarCreateAppointmentButton" text="Criar" press=".appointmentCreate" tooltip="Criar novo compromisso" />
+                <Button id="PlanningCalendarCreateAppointmentButton" text="Criar" press=".appointmentCreate" tooltip="Criar novo compromisso"  />
                 <Button id="PlanningCalendarLegendButton" icon="sap-icon://legend" press=".openLegend" tooltip="Abrir legenda do calendário de planejamento" ariaHasPopup="Dialog" />
             </toolbarContent>
             <views>
