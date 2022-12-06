@@ -1,5 +1,5 @@
 {
-  "name": "TeamCalendar",
+  "name": "teamcalendar",
   "version": "1.0.0",
   "description": "UI5 Demo App - Team Calendar",
   "private": true,
@@ -16,7 +16,8 @@
     "@openui5/sap.ui.documentation": "^1",
     "@openui5/sap.ui.layout": "^1",
     "@openui5/themelib_sap_fiori_3": "^1",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "json-server": "^0.17.1"
   },
   "engines": {
     "node": "18.12.1",
@@ -26,5 +27,25 @@
     "@ui5/cli": "^2.14.4",
     "eslint": "^4.19.1"
   },
-  "author": "nic-labs"
+  "author": "nic-labs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hybsonmaia/team-calendar-nicpad.git"
+  },
+  "keywords": [
+    "implantaao",
+    "backend",
+    "banco",
+    "de",
+    "dados",
+    "programacao",
+    "web",
+    "ii",
+    "pw"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hybsonmaia/team-calendar-nicpad/issues"
+  },
+  "homepage": "https://github.com/hybsonmaia/team-calendar-nicpad#readme"
 }
