@@ -1,4 +1,10 @@
-<core:FragmentDefinition xmlns="sap.m" xmlns:unified="sap.ui.unified" xmlns:core="sap.ui.core">
+<core:FragmentDefinition
+    controllerName="teamCalendar.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout" 
+    xmlns="sap.m" 
+    xmlns:unified="sap.ui.unified" 
+    xmlns:core="sap.ui.core">
     <VBox>
         <PlanningCalendar
             id="PlanningCalendar"
@@ -11,13 +17,15 @@
             rowSelectionChange=".rowSelectionHandler"
             startDateChange=".startDateChangeHandler"
             viewChange=".viewChangeHandler"
+            appointmentSelect="handleAppointmentSelect"
+            intervalSelect="handleAppointmentAddWithContext"
         >
             <toolbarContent>
                 <Select id="PlanningCalendarTeamSelector" change=".selectChangeHandler">
                     <core:Item key="Team" text="Equipe" />
                 </Select>
-                <Button id="PlanningCalendarCreateAppointmentButton" text="Criar" press=".appointmentCreate" tooltip="Criar novo compromisso"  />
-                <Button id="PlanningCalendarLegendButton" icon="sap-icon://legend" press=".openLegend" tooltip="Abrir legenda do calendário de planejamento" ariaHasPopup="Dialog" />
+                <Button id="PlanningCalendarCreateAppointmentButton" text="Criar" press="appointmentCreate" tooltip="Criar novo compromisso" ariaHasPopup="Dialog" />
+                <Button id="PlanningCalendarLegendButton" icon="sap-icon://legend" press="openLegend" tooltip="Abrir legenda do calendário de planejamento" ariaHasPopup="Dialog" />
             </toolbarContent>
             <views>
                 <PlanningCalendarView key="Day" intervalType="Hour" description="Dia" intervalsS="3" intervalsM="6" intervalsL="12" showSubIntervals="true" />

@@ -1,0 +1,79 @@
+<core:FragmentDefinition
+		xmlns:l="sap.ui.layout"
+		xmlns:core="sap.ui.core"
+		xmlns="sap.m">
+	<Dialog contentWidth="600px" draggable="true" id="createDialog">
+		<beginButton>
+			<Button text="Adicionar Tarefa" type="Emphasized" press="handleDialogSaveButton"/>
+		</beginButton>
+		<endButton>
+			<Button text="Cancelar" press="handleDialogCancelButton"/>
+		</endButton>
+		<l:VerticalLayout
+			class="sapUiContentPadding"
+			width="100%">
+			<CheckBox id="isIntervalAppointment" text="Interval appointment" select="handleAppointmentTypeChange"/>
+			<Label class="label" text="Nome da Tarefa:" labelFor="inputName"/>
+			<Input class="input" id="inputName" placeholder="Reunião pontual" showSuggestion="true"/>
+			<Label text="Tipo da Tarefa:" labelFor="inputType"/>
+			<Input id="inputType" placeholder="Reunião" showSuggestion="true"/>
+			<Label text="Inicio: " labelFor="startDate"/>
+			<DateTimePicker
+					id="startDate"
+					displayFormat="short"
+					required="true"
+					change="handleCreateChange"
+					placeholder="DD/MM//AA" showSuggestion="true"/>
+			<Label text="Fim: " labelFor="endDate"/>
+			<DateTimePicker
+					id="endDate"
+					displayFormat="short"
+					required="true"
+					change="handleCreateChange"
+					placeholder="DD/MM//AA" showSuggestion="true"/>
+			<Label text="Descrição - (Obrigatório): " labelFor="inputInfo" required="true"/>
+			<TextArea id="moreInfo" rows="6" width="100%"/>
+			<Label text="Dono da tarefa:" labelFor="selectPerson"/>
+			<Select
+					id="selectPerson"
+					forceSelection="false"
+					change="handleChangeSelect"
+					width="100%"
+					items="{
+						'path': 'calendar/team'
+					}">
+					<core:Item key="{name}" text="{name}"/>
+			</Select>
+
+			<Label text="Aprovador da tarefa:" labelFor="selectPerson2"/>
+			<Select
+					id="selectPerson2"
+					forceSelection="false"
+					change="handleChangeSelect"
+					width="100%"
+					items="{
+						'path': '/people'
+					}">
+					<core:Item key="{name}" text="{name}"/>
+			</Select>
+
+			<Label text="Prioridade:" labelFor="inputPriority" />
+			<Input id="inputPriority" placeholder="Urgente" showSuggestion="true"/>
+
+			<Label text="Participante da tarefa:" labelFor="selectPerson3"/>
+			<Select
+					id="selectPerson3"
+					forceSelection="false"
+					change="handleChangeSelect"
+					width="100%"
+					items="{
+						'path': '/people'
+					}">
+					<core:Item key="{name}" text="{name}"/>
+			</Select>
+
+			<Label text="Title: " labelFor="inputTitle"/>
+			<Input id="inputTitle"/>
+		</l:VerticalLayout>
+	</Dialog>
+</core:FragmentDefinition>

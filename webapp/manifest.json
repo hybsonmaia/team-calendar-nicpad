@@ -19,7 +19,9 @@
 		},
 		"dependencies": {
 			"libs": {
-				"sap.ui.unified": {}
+				"sap.ui.unified": {},
+				"sap.ui.core": {},
+				"sap.m": {}
 			}
 		},
 		"config": {
@@ -39,11 +41,14 @@
 					"webapp/test/integration/MainJourney.js",
 					"webapp/test/integration/opaTests.qunit.js",
 					"webapp/test/integration/opaTests.qunit.html",
+					"webapp/view/Create.fragment.xml",
+					"webapp/view/Details.fragment.xml",
 					"webapp/view/Main.view.xml",
 					"webapp/view/Legend.fragment.xml",
 					"webapp/view/PlanningCalendar.fragment.xml",
 					"webapp/view/SinglePlanningCalendar.fragment.xml",
 					"webapp/Component.js",
+					"Create.fragment.xml",
 					"webapp/index.html",
 					"webapp/manifest.json",
 					"demoapp.json",
